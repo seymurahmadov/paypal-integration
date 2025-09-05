@@ -53,7 +53,7 @@ public class PaypalController {
                 }
             }
         } catch (PayPalRESTException e) {
-//            log.error("Error occurred:: ", e);
+            log.error("Error occurred:: ", e);
         }
         return new RedirectView("/payment/error");
     }
@@ -69,7 +69,7 @@ public class PaypalController {
                 return "paymentSuccess";
             }
         } catch (PayPalRESTException e) {
-//            log.error("Error occurred:: ", e);
+            log.error("Error occurred:: ", e);
         }
         return "paymentSuccess";
     }
